@@ -1,13 +1,13 @@
 output "cluster_id" {
-  value = aws_eks_cluster.this.id
+  value = aws_eks_cluster.cluster.id
 }
 
 output "cluster_endpoint" {
-  value = aws_eks_cluster.this.endpoint
+  value = aws_eks_cluster.cluster.endpoint
 }
 
 output "cluster_ca_certificate" {
-  value = aws_eks_cluster.this.certificate_authority[0].data
+  value = aws_eks_cluster.cluster.certificate_authority[0].data
 }
 
 output "oidc_provider_arn" {
@@ -15,9 +15,10 @@ output "oidc_provider_arn" {
 }
 
 output "cluster_security_group_id" {
-  value = aws_eks_cluster.this.vpc_config[0].cluster_security_group_id
+  value = aws_eks_cluster.cluster.vpc_config[0].cluster_security_group_id
 }
+
 output "cluster_oidc_issuer_url" {
-  value = aws_eks_cluster.this.identity[0].oidc[0].issuer
+  value = aws_eks_cluster.cluster.identity[0].oidc[0].issuer
 }
 
