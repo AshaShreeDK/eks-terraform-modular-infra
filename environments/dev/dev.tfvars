@@ -1,9 +1,9 @@
 region = "us-east-1"
 
-customer = "A2A"
+customer = "dlr"
 env      = "dev"
 
-cluster_name = "A2A-EKS-DEV"
+cluster_name = "EKS-DEV"
 
 vpc_cidr = "10.10.0.0/16"
 
@@ -26,7 +26,7 @@ public_nodes_labels = {
 }
 
 private_nodes_capacity = "ON_DEMAND"
-private_nodes_type     = "t2.medium"
+private_nodes_type     = "t2.small"
 private_nodes_min      = 0
 private_nodes_max      = 1
 private_nodes_des      = 1
